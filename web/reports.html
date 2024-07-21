@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paladin Guild</title>
+    <link rel="stylesheet" href="reports.css">
+  </head>
+<body>
+  <div class="header">
+    <img src="paladin-logo.png" alt="Paladin Guild Crest" class="logo">
+    <div>
+      <span>Paul Kiat</span>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+  
+  <div class="nav">
+    <a href="home.html">Home</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="forms.html">Forms</a>
+    <a href="reports.html" class="active">Reports</a>
+    <a href="patient-summary.html">Patient Summary</a>
+    <a href="medication.html">Medication</a>
+    <a href="messages.html">Messages</a>
+    <a href="education.html">Education</a>
+    <a href="profile.html">Profile</a>
+  </div>
+  
+  <div class="content">
+    <h1>Reports Dashboard</h1>
+    
+    <div class="chart-container">
+      <div class="chart">
+        <h2>Patient Demographics</h2>
+        <canvas id="demographicsChart"></canvas>
+      </div>
+      
+      <div class="chart">
+        <h2>Appointment Types</h2>
+        <canvas id="appointmentTypesChart"></canvas>
+      </div>
+      
+      <div class="chart">
+        <h2>Revenue by Department</h2>
+        <canvas id="revenueChart"></canvas>
+      </div>
+      
+      <div class="chart">
+        <h2>Patient Satisfaction</h2>
+        <canvas id="satisfactionChart"></canvas>
+      </div>
+    </div>
+    
+    <h2>Custom Reports</h2>
+    <button class="button">Generate Financial Report</button>
+    <button class="button">Create Patient Population Report</button>
+    <button class="button">Analyze Clinical Outcomes</button>
+    <button class="button">View Prescription Trends</button>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Demographics Chart
+    new Chart(document.getElementById('demographicsChart'), {
+      type: 'pie',
+      data: {
+        labels: ['0-18', '19-35', '36-50', '51-65', '65+'],
+        datasets: [{
+          data: [15, 25, 20, 25, 15],
+          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+        }]
+      }
+    });
+
+    // Appointment Types Chart
+    new Chart(document.getElementById('appointmentTypesChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Check-up', 'Follow-up', 'Urgent', 'Specialist', 'Procedure'],
+        datasets: [{
+          label: 'Number of Appointments',
+          data: [300, 250, 100, 150, 75],
+          backgroundColor: '#4CAF50'
+        }]
+      }
+    });
+
+    // Revenue Chart
+    new Chart(document.getElementById('revenueChart'), {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Revenue ($)',
+          data: [50000, 55000, 60000, 58000, 65000, 70000],
+          borderColor: '#FF6384',
+          fill: false
+        }]
+      }
+    });
+
+    // Satisfaction Chart
+    new Chart(document.getElementById('satisfactionChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Very Satisfied', 'Satisfied', 'Neutral', 'Dissatisfied'],
+        datasets: [{
+          data: [60, 25, 10, 5],
+          backgroundColor: ['#4CAF50', '#8BC34A', '#FFC107', '#FF5722']
+        }]
+      }
+    });
+
+    // Simulated interactivity
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        alert(`Generating report: ${e.target.textContent}. This would trigger the report generation process in a real application.`);
+      });
+    });
+  </script>
+</body></html>

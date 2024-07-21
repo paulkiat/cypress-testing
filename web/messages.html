@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paladin Guild</title>
+    <link rel="stylesheet" href="reports.css">
+  </head>
+<body>
+  <div class="header">
+    <img src="paladin-logo.png" alt="Paladin Guild Crest" class="logo">
+    <div>
+      <span>Paul Kiat</span>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+  
+  <div class="nav">
+    <a href="home.html">Home</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="forms.html">Forms</a>
+    <a href="reports.html">Reports</a>
+    <a href="patient-summary.html">Patient Summary</a>
+    <a href="medication.html">Medication</a>
+    <a href="messages.html" class="active">Messages</a>
+    <a href="education.html">Education</a>
+    <a href="profile.html">Profile</a>
+  </div>
+  
+  <div class="content">
+    <h1>Messages</h1>
+    
+    <button class="button">Compose New Message</button>
+    
+    <div class="message-list">
+      <div class="message">
+        <div class="message-icon">!</div>
+        <div class="message-content">
+          <div class="message-sender">Dr. Smith</div>
+          <div class="message-subject">Lab Results Available</div>
+          <div class="message-preview">Your recent lab results are now available. Please review them at your earliest convenience...</div>
+        </div>
+        <div class="message-date">Jun 15</div>
+      </div>
+      
+      <div class="message">
+        <div class="message-icon">R</div>
+        <div class="message-content">
+          <div class="message-sender">Receptionist</div>
+          <div class="message-subject">Appointment Confirmation</div>
+          <div class="message-preview">This is a confirmation of your appointment scheduled for June 20th at 2:00 PM...</div>
+        </div>
+        <div class="message-date">Jun 14</div>
+      </div>
+      
+      <div class="message">
+        <div class="message-icon">P</div>
+        <div class="message-content">
+          <div class="message-sender">Pharmacy</div>
+          <div class="message-subject">Prescription Ready</div>
+          <div class="message-preview">Your prescription is ready for pickup. Please visit our pharmacy during business hours...</div>
+        </div>
+        <div class="message-date">Jun 13</div>
+      </div>
+      
+      <div class="message">
+        <div class="message-icon">B</div>
+        <div class="message-content">
+          <div class="message-sender">Billing Department</div>
+          <div class="message-subject">Invoice for Recent Visit</div>
+          <div class="message-preview">Please find attached the invoice for your recent medical visit. If you have any questions...</div>
+        </div>
+        <div class="message-date">Jun 10</div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Simulated interactivity
+    document.querySelector('.button').addEventListener('click', () => {
+      alert('Compose New Message: This would open a new message composition interface in a real application.');
+    });
+    
+    document.querySelectorAll('.message').forEach(message => {
+      message.addEventListener('click', () => {
+        alert('View Message: This would open the full message content in a real application.');
+      });
+    });
+  </script>
+</body></html>

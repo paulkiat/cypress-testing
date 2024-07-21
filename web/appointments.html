@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paladin Guild</title>
+    <link rel="stylesheet" href="appointments.css">
+  </head>
+<body>
+  <div class="header">
+    <img src="paladin-logo.png" alt="Paladin Guild Crest" class="logo">
+    <div>
+      <span>Paul Kiat</span>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+  
+  <div class="nav">
+    <a href="home.html">Home</a>
+    <a href="appointments.html" class="active">Appointments</a>
+    <a href="forms.html">Forms</a>
+    <a href="reports.html">Reports</a>
+    <a href="patient-summary.html">Patient Summary</a>
+    <a href="medication.html">Medication</a>
+    <a href="messages.html">Messages</a>
+    <a href="education.html">Education</a>
+    <a href="profile.html">Profile</a>
+  </div>
+  
+  <div class="content">
+    <h1>Appointments</h1>
+    
+    <h2>Upcoming Appointments</h2>
+    <ul class="appointment-list">
+      <li class="appointment-item">
+        <div class="appointment-info">
+          <strong>Dr. Judith Castillo - General Checkup</strong><br>
+          Date: June 15, 2023 | Time: 10:00 AM
+        </div>
+        <div class="appointment-actions">
+          <button class="button">Reschedule</button>
+          <button class="button cancel">Cancel</button>
+        </div>
+      </li>
+      <li class="appointment-item">
+        <div class="appointment-info">
+          <strong>Dr. Michael Pham - Anesthesiology Consultation</strong><br>
+          Date: June 22, 2023 | Time: 2:30 PM
+        </div>
+        <div class="appointment-actions">
+          <button class="button">Reschedule</button>
+          <button class="button cancel">Cancel</button>
+        </div>
+      </li>
+    </ul>
+    
+    <h2>Past Appointments</h2>
+    <ul class="appointment-list">
+      <li class="appointment-item">
+        <div class="appointment-info">
+          <strong>Dr. David Weck - Annual Physical</strong><br>
+          Date: May 5, 2023 | Time: 9:00 AM
+        </div>
+        <div class="appointment-actions">
+          <button class="button">View Summary</button>
+        </div>
+      </li>
+      <li class="appointment-item">
+        <div class="appointment-info">
+          <strong>Dr. Andrew Martinez - Cardiology Follow-up</strong><br>
+          Date: April 18, 2023 | Time: 11:30 AM
+        </div>
+        <div class="appointment-actions">
+          <button class="button">View Summary</button>
+        </div>
+      </li>
+    </ul>
+    
+    <h2>Schedule New Appointment</h2>
+    <form action="schedule-appointment.html" method="GET">
+      <label for="doctor">Select Doctor:</label>
+      <select id="doctor" name="doctor" required>
+        <option value="">Choose a doctor</option>
+        <option value="dr-johnson">Dr. Judith Castillo</option>
+        <option value="dr-pham">Dr. Michael Pham</option>
+        <option value="dr-chen">Dr. David Weck</option>
+        <option value="dr-taylor">Dr. Andrew Martinez</option>
+      </select>
+      <br><br>
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required>
+      <br><br>
+      <label for="time">Preferred Time:</label>
+      <input type="time" id="time" name="time" required>
+      <br><br>
+      <label for="reason">Reason for Visit:</label>
+      <textarea id="reason" name="reason" rows="4" cols="50" required></textarea>
+      <br><br>
+      <input type="submit" value="Schedule Appointment" class="button">
+    </form>
+  </div>
+  
+  <script>
+    // Simulated appointment interaction
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const action = e.target.textContent;
+        const appointmentInfo = e.target.closest('.appointment-item').querySelector('.appointment-info').textContent;
+        if (action === 'Reschedule') {
+          alert(`Rescheduling appointment: ${appointmentInfo}. In a real application, this would open a rescheduling interface.`);
+        } else if (action === 'Cancel') {
+          if (confirm(`Are you sure you want to cancel this appointment?\n\n${appointmentInfo}`)) {
+            alert('Appointment cancelled. In a real application, this would update the database and notify the medical office.');
+          }
+        } else if (action === 'View Summary') {
+          alert(`Viewing summary for: ${appointmentInfo}. In a real application, this would show the appointment summary and any related medical notes.`);
+        }
+      });
+    });
+
+    // Simulated form submission
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      let appointmentDetails = '';
+      for (let [key, value] of formData.entries()) {
+        appointmentDetails += `${key}: ${value}\n`;
+      }
+      alert(`Appointment request submitted:\n\n${appointmentDetails}\nIn a real application, this would be sent to the scheduling system for processing.`);
+    });
+  </script>
+</body>
+</html>

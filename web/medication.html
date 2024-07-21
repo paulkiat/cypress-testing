@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paladin Guild</title>
+    <link rel="stylesheet" href="medication.css">
+  </head>
+<body>
+  <div class="header">
+    <img src="paladin-logo.png" alt="Paladin Guild Crest" class="logo">
+    <div>
+      <span>Paul Kiat</span>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+  
+  <div class="nav">
+    <a href="home.html">Home</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="forms.html">Forms</a>
+    <a href="reports.html">Reports</a>
+    <a href="patient-summary.html">Patient Summary</a>
+    <a href="medication.html" class="active">Medication</a>
+    <a href="messages.html">Messages</a>
+    <a href="education.html">Education</a>
+    <a href="profile.html">Profile</a>
+  </div>
+  
+  <div class="content">
+    <h1>Medication Management</h1>
+    
+    <h2>Current Medications</h2>
+    <table class="medication-list">
+      <thead>
+        <tr>
+          <th>Medication</th>
+          <th>Dosage</th>
+          <th>Frequency</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Prescribing Doctor</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lisinopril</td>
+          <td>10mg</td>
+          <td>Once daily</td>
+          <td>01/15/2023</td>
+          <td>Ongoing</td>
+          <td>Dr. Smith</td>
+          <td><button class="button">Refill</button></td>
+        </tr>
+        <tr>
+          <td>Metformin</td>
+          <td>500mg</td>
+          <td>Twice daily</td>
+          <td>03/01/2023</td>
+          <td>Ongoing</td>
+          <td>Dr. Johnson</td>
+          <td><button class="button">Refill</button></td>
+        </tr>
+        <tr>
+          <td>Atorvastatin</td>
+          <td>20mg</td>
+          <td>Once daily at bedtime</td>
+          <td>02/10/2023</td>
+          <td>Ongoing</td>
+          <td>Dr. Smith</td>
+          <td><button class="button">Refill</button></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h2>Medication History</h2>
+    <table class="medication-list">
+      <thead>
+        <tr>
+          <th>Medication</th>
+          <th>Dosage</th>
+          <th>Frequency</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Prescribing Doctor</th>
+          <th>Reason for Discontinuation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Amoxicillin</td>
+          <td>500mg</td>
+          <td>Three times daily</td>
+          <td>11/05/2022</td>
+          <td>11/15/2022</td>
+          <td>Dr. Garcia</td>
+          <td>Course completed</td>
+        </tr>
+        <tr>
+          <td>Ibuprofen</td>
+          <td>400mg</td>
+          <td>As needed</td>
+          <td>09/20/2022</td>
+          <td>10/05/2022</td>
+          <td>Dr. Smith</td>
+          <td>No longer needed</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h2>Actions</h2>
+    <button class="button">Request New Prescription</button>
+    <button class="button">Report Side Effects</button>
+    <button class="button">View Medication Interactions</button>
+    <button class="button">Set Medication Reminders</button>
+  </div>
+  
+  <script>
+    // Simulated interactivity
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        if (e.target.textContent === 'Refill') {
+          alert('Refill request sent for ' + e.target.closest('tr').cells[0].textContent);
+        } else {
+          alert(`Action: ${e.target.textContent}. This would trigger the corresponding action in a real application.`);
+        }
+      });
+    });
+  </script>
+</body></html>

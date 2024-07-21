@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paladin Guild</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+<body>
+  <div class="header">
+    <img src="paladin-logo.png" alt="Paladin Guild Crest" class="logo">
+    <div>
+      <span>Paul Kiat</span>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+  
+  <div class="nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="forms.html">Forms</a>
+    <a href="reports.html">Reports</a>
+    <a href="patient-summary.html">Patient Summary</a>
+    <a href="medication.html">Medication</a>
+    <a href="messages.html">Messages</a>
+    <a href="education.html">Education</a>
+    <a href="profile.html">Profile</a>
+  </div>
+  
+  <div class="content">
+    <div class="sidebar">
+      <div class="widget">
+        <h3>New Forms (0)</h3>
+        <a href="view-forms.html">View Forms</a>
+      </div>
+      
+      <div class="widget">
+        <h3>Appointments (0)</h3>
+        <a href="view-appointments.html">View Appointments</a>
+      </div>
+      
+      <div class="widget">
+        <h3>New Messages (0)</h3>
+        <a href="view-messages.html">View Messages</a>
+      </div>
+      
+      <div class="widget">
+        <h3>Balance: $96.00</h3>
+        <button class="button">Make a Payment</button>
+      </div>
+    </div>
+    
+    <div class="main">
+      <h1>Welcome, Jeremy Bates</h1>
+      
+      <div class="grid">
+        <div class="grid-item">
+          <h3>Before Visit</h3>
+          <ul>
+            <li><a href="fill-forms.html">Fill out patient forms</a></li>
+            <li><a href="request-appointment.html">Request an appointment</a></li>
+            <li><a href="send-message.html">Send a message</a></li>
+            <li><a href="locate-clinic.html">Locate the clinic</a></li>
+            <li><a href="update-profile.html">Update my profile</a></li>
+            <li><a href="update-insurance.html">Provide my insurance information</a></li>
+          </ul>
+        </div>
+        
+        <div class="grid-item">
+          <h3>After Visit</h3>
+          <ul>
+            <li><a href="view-clinical-reports.html">View clinical reports</a></li>
+            <li><a href="view-lab-results.html">View lab results</a></li>
+            <li><a href="view-prescriptions.html">View prescriptions</a></li>
+            <li><a href="view-orders.html">View orders</a></li>
+            <li><a href="request-refill.html">Request a refill</a></li>
+            <li><a href="send-message.html">Send a message</a></li>
+          </ul>
+        </div>
+        
+        <div class="grid-item">
+          <h3>Stay Connected</h3>
+          <ul>
+            <li><a href="keep-profile-updated.html">Keep my profile updated</a></li>
+            <li><a href="view-history.html">View my history</a></li>
+            <li><a href="view-continuity-care.html">View my continuity of care document</a></li>
+            <li><a href="plan-next-visit.html">Plan my next visit</a></li>
+            <li><a href="send-message.html">Send a message</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <script>
+    // Simulated interactivity
+    document.querySelectorAll('a, .button').forEach(element => {
+      element.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert(`Action: ${e.target.textContent}. In a real application, this would navigate to the appropriate page or perform the specified action.`);
+      });
+    });
+  </script> -->
+</body></html>

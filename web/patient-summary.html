@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paladin Guild</title>
+    <link rel="stylesheet" href="patient-summary.css">
+  </head>
+<body>
+  <div class="header">
+    <img src="paladin-logo.png" alt="Paladin Guild Crest" class="logo">
+    <div>
+      <span>Paul Kiat</span>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+  
+  <div class="nav">
+    <a href="home.html">Home</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="forms.html">Forms</a>
+    <a href="reports.html">Reports</a>
+    <a href="patient-summary.html" class="active">Patient Summary</a>
+    <a href="medication.html">Medication</a>
+    <a href="messages.html">Messages</a>
+    <a href="education.html">Education</a>
+    <a href="profile.html">Profile</a>
+  </div>
+  
+  <div class="content">
+    <h1>Patient Summary</h1>
+    
+    <div class="summary-section">
+      <h2>Personal Information</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <h3>Demographics</h3>
+          <p><strong>Name:</strong> Paul Kiat</p>
+          <p><strong>DOB:</strong> 06/18/1988</p>
+          <p><strong>Gender:</strong> Male</p>
+          <p><strong>MRN:</strong> 123456</p>
+        </div>
+        <div class="summary-item">
+          <h3>Contact Information</h3>
+          <p><strong>Phone:</strong> (310)-863-8141</p>
+          <p><strong>Email:</strong> paul.kiat@email.com</p>
+          <p><strong>Address:</strong> 123 Main St, Anytown, USA 12345</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="summary-section">
+      <h2>Medical Information</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <h3>Allergies</h3>
+          <ul>
+            <li>Penicillin</li>
+            <li>Peanuts</li>
+          </ul>
+        </div>
+        <div class="summary-item">
+          <h3>Current Medications</h3>
+          <ul>
+            <li>Lisinopril 10mg daily</li>
+            <li>Metformin 500mg twice daily</li>
+          </ul>
+        </div>
+        <div class="summary-item">
+          <h3>Chronic Conditions</h3>
+          <ul>
+            <li>Hypertension</li>
+            <li>Type 2 Diabetes</li>
+          </ul>
+        </div>
+        <div class="summary-item">
+          <h3>Recent Vital Signs</h3>
+          <p><strong>BP:</strong> 120/80 mmHg</p>
+          <p><strong>HR:</strong> 72 bpm</p>
+          <p><strong>Temp:</strong> 98.6°F</p>
+          <p><strong>Weight:</strong> 180 lbs</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="summary-section">
+      <h2>Recent Activity</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <h3>Last Visit</h3>
+          <p><strong>Date:</strong> 05/15/2023</p>
+          <p><strong>Provider:</strong> Dr. David Weck</p>
+          <p><strong>Reason:</strong> Annual Physical</p>
+        </div>
+        <div class="summary-item">
+          <h3>Upcoming Appointments</h3>
+          <p><strong>Date:</strong> 07/01/2023</p>
+          <p><strong>Provider:</strong> Dr. Andrew Martinez</p>
+          <p><strong>Reason:</strong> Cardiology Follow-up</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="summary-section">
+      <h2>Quick Actions</h2>
+      <button class="button">Schedule Appointment</button>
+      <button class="button">Request Prescription Refill</button>
+      <button class="button">View Lab Results</button>
+      <button class="button">Update Medical History</button>
+    </div>
+  </div>
+  
+  <script>
+    // Simulated interactivity
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        alert(`Action: ${e.target.textContent}. This would trigger the corresponding action in a real application.`);
+      });
+    });
+  </script>
+</body></html>

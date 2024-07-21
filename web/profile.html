@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paladin Guild</title>
+    <link rel="stylesheet" href="profile.css">
+  </head>
+<body>
+  <div class="header">
+    <img src="paladin-logo.png" alt="Paladin Guild Crest" class="logo">
+    <div>
+      <span>Paul Kiat</span>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+  
+  <div class="nav">
+    <a href="home.html">Home</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="forms.html">Forms</a>
+    <a href="reports.html">Reports</a>
+    <a href="patient-summary.html">Patient Summary</a>
+    <a href="medication.html">Medication</a>
+    <a href="messages.html">Messages</a>
+    <a href="education.html">Education</a>
+    <a href="profile.html" class="active">Profile</a>
+  </div>
+  
+  <div class="content">
+    <h1>User Profile</h1>
+    
+    <div class="profile-section">
+      <h2>Personal Information</h2>
+      <div class="profile-info">
+        <p><strong>Name:</strong> Jeremy Bates</p>
+        <p><strong>Date of Birth:</strong> 01/15/1985</p>
+        <p><strong>Gender:</strong> Male</p>
+        <p><strong>Marital Status:</strong> Married</p>
+      </div>
+      <button class="button">Edit Personal Information</button>
+    </div>
+    
+    <div class="profile-section">
+      <h2>Contact Information</h2>
+      <div class="profile-info">
+        <p><strong>Email:</strong> jeremy.bates@email.com</p>
+        <p><strong>Phone:</strong> (555) 123-4567</p>
+        <p><strong>Address:</strong> 123 Main St, Anytown, USA 12345</p>
+      </div>
+      <button class="button">Edit Contact Information</button>
+    </div>
+    
+    <div class="profile-section">
+      <h2>Insurance Information</h2>
+      <div class="profile-info">
+        <p><strong>Primary Insurance:</strong> HealthCare Plus</p>
+        <p><strong>Policy Number:</strong> HCP1234567</p>
+        <p><strong>Group Number:</strong> GRP987654</p>
+      </div>
+      <button class="button">Edit Insurance Information</button>
+    </div>
+    
+    <div class="profile-section">
+      <h2>Emergency Contact</h2>
+      <div class="profile-info">
+        <p><strong>Name:</strong> Sarah Bates</p>
+        <p><strong>Relationship:</strong> Spouse</p>
+        <p><strong>Phone:</strong> (555) 987-6543</p>
+      </div>
+      <button class="button">Edit Emergency Contact</button>
+    </div>
+    
+    <div class="profile-section">
+      <h2>Account Settings</h2>
+      <button class="button">Change Password</button>
+      <button class="button">Notification Preferences</button>
+      <button class="button">Privacy Settings</button>
+    </div>
+  </div>
+  
+  <script>
+    // Simulated interactivity
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        alert(`Action: ${e.target.textContent}. In a real application, this would open an edit form or perform the specified action.`);
+      });
+    });
+  </script>
+</body></html>

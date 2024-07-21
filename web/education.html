@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paladin Guild</title>
+    <link rel="stylesheet" href="education.css">
+  </head>
+<body>
+  <div class="header">
+    <img src="paladin-logo.png" alt="Paladin Guild Crest" class="logo">
+    <div>
+      <span>Paul Kiat</span>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+  
+  <div class="nav">
+    <a href="home.html">Home</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="forms.html">Forms</a>
+    <a href="reports.html">Reports</a>
+    <a href="patient-summary.html">Patient Summary</a>
+    <a href="medication.html">Medication</a>
+    <a href="messages.html">Messages</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="profile.html">Profile</a>
+  </div>
+  
+  <div class="content">
+    <h1>Patient Education Resources</h1>
+    
+    <p>Welcome to your personalized education center. Here you'll find resources tailored to your health conditions and general wellness information. Explore the topics below to learn more about managing your health effectively.</p>
+    
+    <div class="education-grid">
+      <div class="education-item">
+        <h3>Understanding Hypertension</h3>
+        <p>Learn about the causes, symptoms, and management of high blood pressure.</p>
+        <button class="button">Read More</button>
+      </div>
+      
+      <div class="education-item">
+        <h3>Asthma Management</h3>
+        <p>Discover techniques and treatments to control asthma symptoms and improve your quality of life.</p>
+        <button class="button">Read More</button>
+      </div>
+      
+      <div class="education-item">
+        <h3>Nutrition and Heart Health</h3>
+        <p>Explore dietary guidelines to maintain a healthy heart and manage blood pressure.</p>
+        <button class="button">Read More</button>
+      </div>
+      
+      <div class="education-item">
+        <h3>Exercise for Chronic Conditions</h3>
+        <p>Find safe and effective exercise routines suitable for those with hypertension and asthma.</p>
+        <button class="button">Read More</button>
+      </div>
+      
+      <div class="education-item">
+        <h3>Medication Management</h3>
+        <p>Tips for properly taking and managing your prescribed medications, including Lisinopril and Albuterol.</p>
+        <button class="button">Read More</button>
+      </div>
+      
+      <div class="education-item">
+        <h3>Stress Reduction Techniques</h3>
+        <p>Learn methods to reduce stress, which can help manage both hypertension and asthma.</p>
+        <button class="button">Read More</button>
+      </div>
+      
+      <div class="education-item">
+        <h3>Understanding Your Lab Results</h3>
+        <p>A guide to interpreting common lab tests related to hypertension and overall health.</p>
+        <button class="button">Read More</button>
+      </div>
+      
+      <div class="education-item">
+        <h3>Allergy Management</h3>
+        <p>Strategies for managing allergies, especially important for those with asthma.</p>
+        <button class="button">Read More</button>
+      </div>
+    </div>
+    
+    <h2>Recommended Videos</h2>
+    <ul>
+      <li><a href="video-hypertension.html">Understanding and Managing Hypertension</a></li>
+      <li><a href="video-asthma-techniques.html">Effective Inhaler Techniques for Asthma</a></li>
+      <li><a href="video-heart-healthy-diet.html">Preparing Heart-Healthy Meals</a></li>
+    </ul>
+    
+    <h2>Upcoming Webinars</h2>
+    <ul>
+      <li>June 15, 2023 - Living Well with Chronic Conditions</li>
+      <li>July 2, 2023 - Nutrition for Hypertension Management</li>
+      <li>July 20, 2023 - Stress Management and Your Health</li>
+    </ul>
+    
+    <p>Remember, this information is meant to supplement, not replace, the advice and care of your healthcare providers. Always consult with your doctor before making significant changes to your health routine.</p>
+  </div>
+  
+  <script>
+    // Simulated education resource interaction
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const topic = e.target.parentElement.querySelector('h3').textContent;
+        alert(`Opening detailed information about "${topic}". In a real application, this would lead to a comprehensive article or interactive module on the topic.`);
+      });
+    });
+  </script>
+</body></html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paladin Guild</title>
+    <link rel="stylesheet" href="forms.css">
+  </head>
+<body>
+  <div class="header">
+    <img src="paladin-logo.png" alt="Paladin Guild Crest" class="logo">
+    <div>
+      <span>Paul Kiat</span>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+  
+  <div class="nav">
+    <a href="home.html">Home</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="forms.html" class="active">Forms</a>
+    <a href="reports.html">Reports</a>
+    <a href="patient-summary.html">Patient Summary</a>
+    <a href="medication.html">Medication</a>
+    <a href="messages.html">Messages</a>
+    <a href="education.html">Education</a>
+    <a href="profile.html">Profile</a>
+  </div>
+  
+  <div class="content">
+    <h1>Patient Forms</h1>
+    
+    <h2>Available Forms</h2>
+    <ul class="form-list">
+      <li class="form-item">
+        <div>
+          <div class="form-title">New Patient Registration</div>
+          <div class="form-description">For first-time patients to provide their personal and medical history.</div>
+        </div>
+        <button class="button">Fill Out</button>
+      </li>
+      <li class="form-item">
+        <div>
+          <div class="form-title">Medical History Update</div>
+          <div class="form-description">To update your medical history, allergies, and current medications.</div>
+        </div>
+        <button class="button">Fill Out</button>
+      </li>
+      <li class="form-item">
+        <div>
+          <div class="form-title">HIPAA Consent Form</div>
+          <div class="form-description">Consent for the use and disclosure of health information.</div>
+        </div>
+        <button class="button">Fill Out</button>
+      </li>
+      <li class="form-item">
+        <div>
+          <div class="form-title">Insurance Information Update</div>
+          <div class="form-description">To update your current insurance information.</div>
+        </div>
+        <button class="button">Fill Out</button>
+      </li>
+      <li class="form-item">
+        <div>
+          <div class="form-title">Symptom Questionnaire</div>
+          <div class="form-description">Detailed form to describe current symptoms and concerns.</div>
+        </div>
+        <button class="button">Fill Out</button>
+      </li>
+    </ul>
+    
+    <h2>Recently Completed Forms</h2>
+    <ul class="form-list">
+      <li class="form-item">
+        <div>
+          <div class="form-title">Annual Health Checkup Questionnaire</div>
+          <div class="form-description">Completed on: 05/15/2023</div>
+        </div>
+        <button class="button">View</button>
+      </li>
+      <li class="form-item">
+        <div>
+          <div class="form-title">Medication Refill Request</div>
+          <div class="form-description">Completed on: 06/02/2023</div>
+        </div>
+        <button class="button">View</button>
+      </li>
+    </ul>
+  </div>
+  
+  <script>
+    // Simulated form interaction
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const action = e.target.textContent;
+        const formName = e.target.closest('.form-item').querySelector('.form-title').textContent;
+        if (action === 'Fill Out') {
+          alert(`Opening form: ${formName}. In a real application, this would load the form for you to fill out.`);
+        } else if (action === 'View') {
+          alert(`Viewing completed form: ${formName}. In a real application, this would show you the form you previously filled out.`);
+        }
+      });
+    });
+  </script>
+</body></html>
